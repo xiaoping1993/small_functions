@@ -1,0 +1,7 @@
+Thu Sep 19 10:05:10 CST 2019：文件C:\Users\wangj01052\Desktop\tools\docx\20180801AA-李浩.docx结构化失败已回退
+Thu Sep 19 10:05:10 CST 2019java.sql.BatchUpdateException: 列名 'structKeyCount' 无效。
+Thu Sep 19 10:05:10 CST 2019执行了0个文件
+Thu Sep 19 10:05:27 CST 2019：文件C:\Users\wangj01052\Desktop\tools\docx\20180801AA-李浩.docx结构化失败已回退
+Thu Sep 19 10:05:27 CST 2019java.sql.BatchUpdateException: 列名 'structKeyCount' 无效。
+Thu Sep 19 10:05:30 CST 2019执行了0个文件
+Tue Dec 03 15:12:35 CST 2019com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 172.30.100.145, port 1433 has failed. Error: "Connection refused: no further information. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".

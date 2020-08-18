@@ -1,0 +1,21 @@
+StructDocxToDB.jar
+	功能：
+		将录入参数sourcePath文件夹路径的所有docx文件结构化到数据库中，之前结构化存到数据库中的文件不会存入，当天新增的再次执行可以加入（数据库信息写在再jar中，如有需要更改请联系王吉平）
+	调用方式：
+		双击运行start_StructDocxToDb.bat文件，如想定时触发可配置到window计划任务中
+	日志：
+		工具已具备日志能力，日志写在同级目录下log.txt文件中
+rtfToDocxAndPdf.doc
+	功能：
+		创建存放rtf的指定目录文件夹下按日期三天的文件夹
+		将指定文件夹中所有rtf文件变为docx，pdf到指定目录中（指定目录不在自动创建），具体路径的指定需要在rtfToDocxAndPdf.doc中的宏做配置
+	调用方式：
+		双击运行start_rtfToDocxAndPdf.bat文件，如想定时触发可配置到window计划任务中
+
+setFilePathsToDB.jar
+	功能：
+		将指定文件夹中所有pdf文件路径（包含子文件夹下所有的）写入数据库字典表：pdfPaths
+	调用方式：
+		双击运行start_setFilePathsToDB.bat文件，如想定时触发可配置到window计划任务中
+PKI_KY.bak
+对应数据库备份文件
