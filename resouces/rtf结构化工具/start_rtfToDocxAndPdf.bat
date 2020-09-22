@@ -1,1 +1,1 @@
-start winword.exe tool.doc
+start winword.exe tool.docx

@@ -11,6 +11,7 @@ rtfToDocxAndPdf.doc
 		将指定文件夹中所有rtf文件变为docx，pdf到指定目录中（指定目录不在自动创建），具体路径的指定需要在rtfToDocxAndPdf.doc中的宏做配置
 	调用方式：
 		双击运行start_rtfToDocxAndPdf.bat文件，如想定时触发可配置到window计划任务中
+	注意：如果tool.docx文件打开有问题，可以自行重建，只需交其内宏脚本替换为“tool宏脚本.txt”即可，脚本中sBasePath根据你需要转变的文档根目录编写
 
 setFilePathsToDB.jar
 	功能：

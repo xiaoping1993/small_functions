@@ -1,0 +1,89 @@
+Sub AutoOpen()
+'
+' rtfToDocx Macro
+    Call createFutureDayDir
+    Call rtfToDocx
+    Call rtfToPdf
+End Sub
+Sub rtfToDocx()
+'
+' rtfToDocx Macro
+'
+Dim sEveryFile As String
+Dim sBaseFile As String
+Dim sSourceFile As String
+Dim sNewSaveFile As String
+Dim sNewSaveFile1 As String
+Dim sDestSaveFile As String
+Dim CurDoc As Object
+Dim sNow As String
+sNow = Format(Date, "YYYY-MM-DD")
+sBasePath = "C:\java\gitcode\small_functions\resouces\rtf结构化工具\test\"
+sSourcePath = sBasePath & "rtf\" & sNow & "\"
+sDestSaveFile = sBasePath & "docx\" & sNow & "\"
+Call 创建文件夹(sDestSaveFile)
+sEveryFile = Dir(sSourcePath & "*.rtf")
+Do While sEveryFile <> ""
+    Set CurDoc = Documents.Open(sSourcePath & sEveryFile, , , , , , , , , , , msoFalse)
+    sNewSavePath = VBA.Strings.Replace(sDestSaveFile & sEveryFile, ".rtf", ".docx")
+    CurDoc.SaveAs2 sNewSavePath, wdFormatDocumentDefault
+    sEveryFile = Dir
+Loop
+Set CurDoc = Nothing
+
+End Sub
+Sub rtfToPdf()
+'
+' rtfToDocx Macro
+'
+Dim sEveryFile As String
+Dim sBaseFile As String
+Dim sSourceFile As String
+Dim sNewSaveFile As String
+Dim sNewSaveFile1 As String
+Dim sDestSaveFile As String
+Dim CurDoc As Object
+Dim sNow As String
+sNow = Format(Date, "YYYY-MM-DD")
+sBasePath = "C:\java\gitcode\small_functions\resouces\rtf结构化工具\test\"
+sSourcePath = sBasePath & "rtf\" & sNow & "\"
+sDestSaveFile = sBasePath & "pdf\" & sNow & "\"
+Call 创建文件夹(sDestSaveFile)
+sEveryFile = Dir(sSourcePath & "*.rtf")
+Do While sEveryFile <> ""
+    Set CurDoc = Documents.Open(sSourcePath & sEveryFile, , , , , , , , , , , msoFalse)
+    sNewSavePath = VBA.Strings.Replace(sDestSaveFile & sEveryFile, ".rtf", ".pdf")
+    CurDoc.SaveAs2 sNewSavePath, wdFormatPDF
+    sEveryFile = Dir
+Loop
+Set CurDoc = Nothing
+
+End Sub
+
+Function 创建文件夹(path As String)
+    If Dir(path, vbDirectory) = "" Then
+        MkDir (path)
+    End If
+    
+End Function
+
+Sub createFutureDayDir()
+    Dim sNow1 As String
+    Dim sNow2 As String
+    Dim sNow3 As String
+    Dim sBasePath As String
+    Dim sSourcePath As String
+    
+    sNow1 = Format(Date + 1, "YYYY-MM-DD")
+    sNow2 = Format(Date + 2, "YYYY-MM-DD")
+    sNow3 = Format(Date + 3, "YYYY-MM-DD")
+    sBasePath = "C:\java\gitcode\small_functions\resouces\rtf结构化工具\test\"
+    sSourcePath = sBasePath & "rtf\" & sNow1 & "\"
+    Call 创建文件夹(sSourcePath)
+    sSourcePath = sBasePath & "rtf\" & sNow2 & "\"
+    Call 创建文件夹(sSourcePath)
+    sSourcePath = sBasePath & "rtf\" & sNow3 & "\"
+    Call 创建文件夹(sSourcePath)
+    
+End Sub
+
