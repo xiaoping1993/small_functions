@@ -12,3 +12,4 @@
 		位置：resource/chrome插件研发手册.docx
 	6）rtf结构化工具
 		位置：resource/rtf结构化工具
+	7）将Map对象、json对象每个节点都存入数据库中（竖表形式）
