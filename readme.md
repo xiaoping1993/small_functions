@@ -13,3 +13,6 @@
 	6）rtf结构化工具
 		位置：resource/rtf结构化工具
 	7）将Map对象、json对象每个节点都存入数据库中（竖表形式）
+	8）自动上传专病库给申康工具（特定json格式，按模板要求加密特定字段）
+		位置：resource/UPDateSK
+	

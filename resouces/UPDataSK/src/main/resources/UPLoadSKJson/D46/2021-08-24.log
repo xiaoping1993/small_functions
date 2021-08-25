@@ -1,0 +1,16 @@
+error:2021-8-24 17:19:10
+error:java.lang.NullPointerException
+error:2021-8-24 17:21:10
+error:java.lang.NullPointerException
+error:2021-8-24 17:22:34
+error:java.lang.NullPointerException
+error:2021-8-24 19:07:22
+error:java.lang.NullPointerException
+error:2021-8-24 19:07:55
+error:com.alibaba.fastjson.JSONException: syntax error, pos 2, line 1, column 3[#主表的sql需要有top(10)限制，这里的top(10要与sql_timestamp一致),不然一次就上传了所有数据网络可能吃不消
+error:2021-8-24 19:08:07
+error:com.alibaba.fastjson.JSONException: syntax error, pos 2, line 1, column 3[#主表的sql需要有top(10)限制，这里的top(10要与sql_timestamp一致),不然一次就上传了所有数据网络可能吃不消
+error:2021-8-24 19:09:42
+error:com.alibaba.fastjson.JSONException: syntax error, pos 2, line 1, column 3[#主表的sql需要有top(10)限制，这里的top(10要与sql_timestamp一致),不然一次就上传了所有数据网络可能吃不消
+error:2021-8-24 19:11:10
+error:com.alibaba.fastjson.JSONException: syntax error, pos 2, line 1, column 3[#主表的sql需要有top(10)限制，这里的top(10要与sql_timestamp一致),不然一次就上传了所有数据网络可能吃不消
