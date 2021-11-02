@@ -32,7 +32,7 @@ public class uploadJson {
     public static void main(String[] args){
         Connection conn = null;
         try {
-            //Properties properties = readProperty("C:/java/UPLoadSKJson/D46/param.properties");
+            //Properties properties = readProperty("C:/java/UPLoad/param.properties");
             Properties properties = readProperty(args[0].toString());
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             String logName =simpleDateFormat.format(new Date());
@@ -99,6 +99,9 @@ public class uploadJson {
         }
         rs.last();
         String timeStamp = rs.getString("timestamp");
+        if(!timeStamp.startsWith("0x")&&!timeStamp.equals("0")){
+            timeStamp="0x"+timeStamp;
+        }
         result.put("pids",pids);
         result.put("timeStamp",timeStamp);
         return result;
