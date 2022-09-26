@@ -1,0 +1,29 @@
+{
+  "name": "node_proxy",
+  "version": "1.0.0",
+  "description": "跨域代理",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houruiqiang1124/node_proxy.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/houruiqiang1124/node_proxy/issues"
+  },
+  "homepage": "https://github.com/houruiqiang1124/node_proxy#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.1.0"
+  },
+  "dependencies": {
+    "browser-cookies": "^1.2.0",
+    "cookie-parser": "^1.4.6",
+    "json": "^11.0.0"
+  }
+}

@@ -1,0 +1,50 @@
+The custom-login-app-example.css template
+You can copy and edit this custom-login-app-example.css template to create a custom login page for the Spotfire Server web UI.
+
+See Replacing the default Login page in the Spotfire Server web UI for more information.
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 20rem;
+    margin-top: 9rem;
+}
+
+.form input {
+    margin: 0;
+}
+
+    .form input[type="text"],
+    .form input[type="password"] {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+    }
+
+    .form input[type="checkbox"] {
+        margin-right: 0.5rem;
+    }
+
+.form button {
+    padding: 0.25rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}

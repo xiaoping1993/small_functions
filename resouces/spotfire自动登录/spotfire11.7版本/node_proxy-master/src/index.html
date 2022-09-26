@@ -1,0 +1,42 @@
+<script type="module" src="/custom-login-app-example.js"></script>
+<link rel="stylesheet" href="/custom-login-app-example.css" />
+<div class="container">
+    <h2>ACME Login</h2>
+    <div class="form">
+        <input id="username"
+               type="text"
+               placeholder="Username"
+               tabindex="1"
+               name="username"
+               autofocus="autofocus"
+               autocomplete="off"
+               autocapitalize="off"
+               autocorrect="off"
+               spellcheck="false" />
+        <input id="password"
+               type="password"
+               placeholder="Password"
+               tabindex="2"
+               name="password"
+               autocomplete="off"
+               autocapitalize="off"
+               spellcheck="false" />
+        <button onclick="doLogin()">Login</button>
+        <div class="form-group">
+            <input id="eula" name="eula" type="checkbox" />
+            <label for="eula">
+                I accept the
+                <a href="http://tibco.com/">terms of service</a>
+            </label>
+        </div>
+        <div id="remember-group" class="form-group hidden">
+            <input id="remember" name="remember" type="checkbox" />
+            <label for="remember">Remember me</label>
+        </div>
+        <div id="error" class="form-group hidden"></div>
+    </div>
+    <div id="wap-container" class="hidden">
+        <hr />
+        <ul id="wap-list"></ul>
+    </div>
+</div>

@@ -57,6 +57,8 @@ public class uploadJson {
             String timeStampTableName = properties.getProperty("timeStampTableName");
             String key_sm4 = properties.getProperty("key_sm4");
             SetSKJSONObject(conn,result,startTimeStamp,jsonArrayTableInfo,timeStampTableName,pids,key_sm4);
+            FileWriter writer = new FileWriter("json.txt");
+            writer.write(result.toJSONString());
             //上传拿到的数据
             JSONObject response = upLoadResult(result,properties);
             if ("200".equals(response.getString("code"))){

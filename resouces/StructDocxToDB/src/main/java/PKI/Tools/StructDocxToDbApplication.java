@@ -30,11 +30,10 @@ public class StructDocxToDbApplication {
 	public static void main(String[] args) throws Exception {
 		setSystemOutPrintLnToFile();
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		//String pathSource = System.getProperty("sourcePath");
-		String pathSource = "C:\\Users\\wangj01052\\Desktop\\test";
-		String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=PKI_KY";
-		String username = "sa";
-		String password = "!@34QWer";
+		String pathSource = System.getProperty("sourcePath");//"C:\\Users\\wangj01052\\Desktop\\test";
+		String url = System.getProperty("url");//"jdbc:sqlserver://127.0.0.1:1433;DatabaseName=PKI_KY";
+		String username = System.getProperty("username");//"sa";
+		String password = System.getProperty("password");//"!@34QWer";
 		int count = structDocxToDB(pathSource,url,username,password);
 		//打印下本次操作了多少文件
 		System.out.println(new Date().toString()+"执行了"+count+"个文件");
@@ -56,7 +55,7 @@ public class StructDocxToDbApplication {
 		}
 	}
 	//结构化指定文件夹下docx到数据库中
-	private static int structDocxToDB(String pathSource,String url,String username,String password) throws IOException, SQLException{
+	private static int structDocxToDB(String pathSource,String url,String username,String password) throws SQLException{
 		Integer count = 0;
 		Connection connection = getConnection(url,username,password);
 		connection.setAutoCommit(false);
@@ -71,11 +70,18 @@ public class StructDocxToDbApplication {
 		File file = new File(pathSource);
 		File[] files = file.listFiles(filefilter);//找到所有docx文件
 		for (File f : files) {//便利所有的docx
-			JSONArray ja = getJSONArrayFromDocx(f);
-	        //将ja拿到的结构化数据存入数据库
-	        if(setJSONArrayToDb(ja,connection)){
-	        	count++;
-	        };
+			JSONArray ja = new JSONArray();
+			try{
+				ja = getJSONArrayFromDocx(f);
+			}catch (Exception e){
+				System.out.println(e.toString());
+				continue;
+			}
+			//将ja拿到的结构化数据存入数据库
+			if(setJSONArrayToDb(ja,connection)){
+				count++;
+			};
+
 		}
 		connection.close();
 		return count;
